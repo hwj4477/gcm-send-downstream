@@ -1,5 +1,5 @@
 #
-# Send Downstream Message For GCM 3.0
+# Push Message Send for Ruby (GCM 3.0)
 # 
 # 2015. 12. 29
 # hwj4477@gmail.com
