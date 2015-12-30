@@ -1,4 +1,4 @@
-# Pushh Message Send for Ruby (GCM 3.0)
+# Push Message Send for Ruby (GCM 3.0)
 - rubygems : http://rubygems.org/gems/gcm-send-downstream
 
 # Installation
