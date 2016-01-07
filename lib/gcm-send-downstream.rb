@@ -28,6 +28,7 @@ class GcmSendDownstream
                            'body' => message},
         'data' => {'title' => @app_title,
         'message' => message},
+        'priority' => 'high', 
         'registration_ids' => registration_ids
 
       }.to_json
