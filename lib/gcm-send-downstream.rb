@@ -25,7 +25,8 @@ class GcmSendDownstream
       params = {
 
         'notification' => {'title' => @app_title,
-                           'body' => message},
+                           'body' => message,
+                           'sound' => 'default'},
         'data' => {'title' => @app_title,
         'message' => message},
         'registration_ids' => registration_ids
@@ -38,6 +39,7 @@ class GcmSendDownstream
 
         'data' => silent_data,
         'registration_ids' => registration_ids,
+        'priority' => 5,
         'content_available' => true
 
       }.to_json
