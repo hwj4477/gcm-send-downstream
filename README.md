@@ -1,12 +1,12 @@
 # Push Message Send for Ruby (GCM 3.0)
 - rubygems : http://rubygems.org/gems/gcm-send-downstream
 
-# Installation
+## Installation
 ```sh
 $ gem install gcm-send-downstream
 ```
 
-# Example usage
+## Usage ##
 ```ruby
 require 'gcm-send-downstream'
 
@@ -16,12 +16,22 @@ APP_TITLE = ""
 
 # GCM Registration_ids (Array)
 REGISTRATION_IDS = []
-    
-gcm_sender = GcmSendDownstream.new(API_KEY, APP_TITLE)
-gcm_sender.send_message(REGISTRATION_IDS, "Test Message") do |result, message|
 
-    puts "result : #{result}"
-    puts "message : #{message}"
+sender = GcmSendDownstream.new(API_KEY, APP_TITLE)
+
+# iOS(PLATFORM_IOS) / Android(PLATFORM_ANDROID)
+sender.send_message(GcmSendDownstream::PLATFORM_IOS, REGISTRATION_IDS, 'Test iOS Message') do |result, message|
+
+  p "result : #{result}"
+  p "message : #{message}"
 
 end
+
+sender.send_message_silent(GcmSendDownstream::PLATFORM_IOS, REGISTRATION_IDS) do |result, message|
+
+  p "result : #{result}"
+  p "message : #{message}"
+
+end
+
 ```
