@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'gcm-send-downstream'
-  s.version     = '0.1.3'
-  s.date        = '2015-12-29'
+  s.version     = '0.2.3'
+  s.date        = '2016-01-20'
   s.summary     = 'GCM'
   s.description = 'Send Downstream Message For GCM 3.0'
   s.authors     = ['hwj4477']

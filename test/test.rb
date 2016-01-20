@@ -7,7 +7,14 @@ REGISTRATION_IDS = []
 
 sender = GcmSendDownstream.new(API_KEY, APP_TITLE)
 
-sender.send_message(REGISTRATION_IDS, 'Test Message') do |result, message|
+sender.send_message(GcmSendDownstream::PLATFORM_IOS, REGISTRATION_IDS, 'Test iOS Message') do |result, message|
+
+  p "result : #{result}"
+  p "message : #{message}"
+
+end
+
+sender.send_message_silent(GcmSendDownstream::PLATFORM_IOS, REGISTRATION_IDS) do |result, message|
 
   p "result : #{result}"
   p "message : #{message}"
